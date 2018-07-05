@@ -12,42 +12,42 @@ import {
 
 
 class AppNavbar extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         isOpen: false
-    //     }
-    // }
+  // constructor(props) {
+  //     super(props);
+  //     this.state = {
+  //         isOpen: false
+  //     }
+  // }
 
-    state = {
-        isOpen: false
-    }
+  state = {
+    isOpen: false
+  }
 
-    toggle = () => {
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    }
+  toggle = () => {
+    this.setState({
+        isOpen: !this.state.isOpen
+    })
+  }
 
-    render() {
-        return <div>
-            <Navbar color="dark" dark expand="sm" className="mb-5">
-                <Container>
-                    <NavbarBrand href="/"> Shop List</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem >
-                                <NavLink href="">
-                                    Home page
-                                </NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Container>
-            </Navbar>
-        </div>
-    }
-    
+  render() {
+    return <div>
+      <Navbar color="dark" dark expand="sm" className="mb-5">
+        <Container>
+          <NavbarBrand href="/"> Shop List</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem >
+                <NavLink href="">
+                    Home page
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Container>
+      </Navbar>
+    </div>
+  }
+  
 }
 export default AppNavbar;
