@@ -25,19 +25,19 @@ class ItemModal extends Component {
     });
   }
 
+  onChange = e => {
+    this.setState({[ e.target.name ]: e.target.value });
+  }
+
   onSubmit = e => {
     e.preventDefault();
     const newItem = {
-      id: 11,
       name: this.state.name
     }
+    console.log('called', this.props)
     this.props.addItem(newItem);
 
     this.toggle();
-  }
-
-  onChange = e => {
-    this.setState({[ e.target.name ]: e.target.value })
   }
 
   render() {
@@ -59,7 +59,7 @@ class ItemModal extends Component {
                       name="name"
                       id="item"
                       placeholder="Add item"
-                      omChange={this.omChange}
+                      onChange={this.onChange}
                       />
 
                 <Button color="dark" style={{float: 'right', marginTop: '10px'}} >Add</Button>
@@ -68,7 +68,6 @@ class ItemModal extends Component {
           </ModalBody>
         </Modal>
       </div>
-
 
     )
   }
