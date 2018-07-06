@@ -34,7 +34,6 @@ class ItemModal extends Component {
     const newItem = {
       name: this.state.name
     }
-    console.log('called', this.props)
     this.props.addItem(newItem);
 
     this.toggle();
